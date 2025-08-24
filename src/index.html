@@ -29,34 +29,50 @@
       <a href="./">
         <img src="./img/forest.svg" alt="Forest" />
       </a>
-      <nav>
-        <ul class="text-white text-xl flex flex-wrap gap-8">
+
+      <!-- hidden  -->
+      <nav
+      id="mobile-menu" 
+      class="lg:block hidden items-center z-40 max-lg:fixed max-lg:w-full max-lg:inset-0">
+        <div class="fixed inset-0 lg:hidden bg-verde-950/40 backdrop-blur-md"></div>
+        <ul class="text-white max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full text-2xl lg:text-xl lg:flex lg:flex-wrap lg:gap-8">
           <li>
             <a
-              class="hover:underline hover:underline-offset-8"
+              class="lg:hover:underline lg:hover:underline-offset-8 max-lg:hover:bg-white/10 p-4 lg:px-0 lg:py-2 block"
               href="#acomodacoes"
               >Acomodações</a
             >
           </li>
           <li>
-            <a class="hover:underline hover:underline-offset-8" href="#eventos"
+            <a class="lg:hover:underline lg:hover:underline-offset-8 max-lg:hover:bg-white/10 p-4 lg:px-0 lg:py-2 block" href="#eventos"
               >Eventos</a
             >
           </li>
           <li>
             <a
-              class="hover:underline hover:underline-offset-8"
+              class="lg:hover:underline lg:hover:underline-offset-8 max-lg:hover:bg-white/10 p-4 lg:px-0 lg:py-2 block"
               href="#experiencias"
               >Experiências</a
             >
           </li>
           <li>
-            <a class="hover:underline hover:underline-offset-8" href="#contato"
+            <a class="lg:hover:underline lg:hover:underline-offset-8 max-lg:hover:bg-white/10 p-4 lg:px-0 lg:py-2 block" href="#contato"
               >Contato</a
             >
           </li>
         </ul>
       </nav>
+
+      <button 
+      id="mobile-button" 
+      class="flex items-center gap-3 bg-verde-400 text-verde-900 py-2 px-4 rounded-full lg:hidden">
+        Menu
+        <span class="h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-verde-800">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
     </header>
     <!-- Conteudo Principal -->
     <main 
@@ -460,5 +476,21 @@
     </div>
   </footer>
 
+
+  <script>
+    const mobileButton = document.getElementById('mobile-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+    })
+
+    mobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
+    })
+
+  </script>
   </body>
 </html>
