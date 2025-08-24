@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from 'tailwindcss/plugin'
+
 module.exports = {
   mode: 'jit', // garante build em tempo real (Tailwind 3 já vem, mas não custa)
   content: ['./src/**/*.{html,js}'],
@@ -21,6 +23,30 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        slideIn: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-20px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        ['slide-in']: 'slideIn .4s ease-in-out forwards',
+        ['fade-in']: 'fadeIn .4s ease-in-out forwards',
+      },
       colors: {
         verde: {
           200: '#ACEF75',
@@ -34,5 +60,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      function animationDelay() {
+        const delays = {};
+        for (let i = 0; i <= 12; i++) {
+          delays[`.animate-${i}`] = {
+            'animation-delay': `${i * 100}ms`,
+          };
+        }
+        return delays;
+      }
+
+      addUtilities(animationDelay());
+    }),
+  ],
 };
