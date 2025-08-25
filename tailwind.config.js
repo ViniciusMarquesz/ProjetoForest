@@ -1,19 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-import plugin from 'tailwindcss/plugin'
+import plugin from 'tailwindcss/plugin';
 
 module.exports = {
-  mode: 'jit', // garante build em tempo real (Tailwind 3 já vem, mas não custa)
   content: ['./src/**/*.{html,js}'],
-  safelist: [
-    'sm:gap-8',
-    'sm:py-1',
-    'sm:pl-4',
-    'sm:pr-1',
-    'p-4',
-    'gap-2',
-    'py-2',
-    'px-4'
-  ],
   theme: {
     container: {
       center: true,
@@ -22,7 +11,12 @@ module.exports = {
         sm: '1rem',
       },
     },
+
     extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        serif: ['DM Serif Text', 'Georgia', 'serif'],
+      },
       keyframes: {
         slideIn: {
           '0%': {
