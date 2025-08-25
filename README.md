@@ -13,14 +13,6 @@ O objetivo do projeto é praticar **responsividade, boas práticas de layout e e
 
 ---
 
-## 📸 Preview
-👉 *(Adicione aqui uma imagem ou gif do projeto rodando para chamar mais atenção dos recrutadores)*  
-
-Exemplo:  
-![Preview do Projeto](./imagens/preview.png)
-
----
-
 ## 🔧 Funcionalidades e aprendizados
 - Estruturação semântica em **HTML5**  
 - Uso de **classes utilitárias do TailwindCSS** para estilização rápida  
