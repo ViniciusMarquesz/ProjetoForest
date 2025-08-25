@@ -3,8 +3,6 @@
 Um site desenvolvido como parte do meu aprendizado em **Front-end**, explorando conceitos de **HTML, CSS e TailwindCSS**.  
 O objetivo do projeto é praticar **responsividade, boas práticas de layout e estilização moderna**.
 
-🔗 **Acesse o projeto online:** [Projeto Forest - GitHub Pages](https://viniciusmarquesz.github.io/ProjetoForest/)
-
 ---
 
 ## 🚀 Tecnologias utilizadas
@@ -12,6 +10,14 @@ O objetivo do projeto é praticar **responsividade, boas práticas de layout e e
 - **CSS3**
 - **TailwindCSS**
 - **Git & GitHub**
+
+---
+
+## 📸 Preview
+👉 *(Adicione aqui uma imagem ou gif do projeto rodando para chamar mais atenção dos recrutadores)*  
+
+Exemplo:  
+![Preview do Projeto](./imagens/preview.png)
 
 ---
 
